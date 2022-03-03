@@ -1,16 +1,20 @@
-import logo from './logo.svg';
 import Navbar from './components/Navbar';
+import ItemsList from './components/ItemsListContainer/ItemsList';
 import './App.css';
 
 function App() {
   return (
-  
+  <>
       <header>
         <Navbar />
-        <div id="logo">
-          <img src={logo} className="App-logo" alt="logo" />
+        <div>
+          <a href="#" class="btn2" target="_blank"><button class="button">Contacto</button></a>
         </div>
       </header>
+      <main>
+         <ItemsList/>
+      </main>
+    </>
   );
 }
 

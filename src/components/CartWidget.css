@@ -1,0 +1,13 @@
+div{
+    margin-top: 0;
+    color: #fff;
+    font-size: 30px;
+    transition: all 0.3s ease 0s;
+}
+div:hover{
+    color: #0088a9;
+}
+
+img, svg{
+    vertical-align: inherit;
+}

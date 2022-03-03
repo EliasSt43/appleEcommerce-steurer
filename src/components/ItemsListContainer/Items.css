@@ -1,0 +1,78 @@
+
+
+.cont-img{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+
+div p{
+    color: #000;
+    margin-top: 10px;
+}
+
+.p{
+    color: #fff;
+}
+
+.margen{
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow:none;
+}
+
+figure{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.imgSection-1{
+    margin-top: 30px;
+    width: 90%;
+    height: 80%;
+    transition: all 500ms ease-out;
+}
+
+.imgSection-2{
+    width: 80%;
+    height: 80%;
+}
+
+figure:hover .imgSection-1{
+    transform: scale(1.1);
+}
+
+.open{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 200%;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+    background: black;
+    transition: all 500ms ease-out;
+    transform: scale(0);
+    visibility: hidden;
+}
+
+figure:hover > .open{
+    transform: scale(1);
+    visibility: visible;
+    margin-top: 200px;
+}
+
+.precio{
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+

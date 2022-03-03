@@ -6,7 +6,7 @@
     margin: 0;
 }
 
-li, a, button{
+li, a{
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -22,11 +22,12 @@ li, a, button{
 }
 
 .logo{
+    color: #fff;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 25px;
     cursor: pointer;
-    margin-right: 25rem;
+    margin-right: 16rem;
 }
 
 .nav_links{
@@ -46,15 +47,14 @@ li, a, button{
     color: #0088a9;
 }
 
-button{
-    padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover{
-    background-color: rgba(0, 136, 169, 0.8);
+@media (min-width:1290px){
+    .logo{
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 25px;
+        cursor: pointer;
+        margin-right: 25rem;
+    }
+    
 }
