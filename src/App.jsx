@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar';
-import ItemsList from './components/ItemsListContainer/ItemsList';
+import ItemsListContainer from './components/ItemsListContainer/ItemsListContainer';
 import './App.css';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         </div>
       </header>
       <main>
-         <ItemsList/>
+         <ItemsListContainer greeting="¡Apple Macbooks Ecommerce!"/ >
       </main>
     </>
   );
