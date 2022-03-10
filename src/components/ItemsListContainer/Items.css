@@ -75,4 +75,26 @@ figure:hover > .open{
     font-size: 1.5rem;
 }
 
+.footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
 
+#num{
+    padding: 0;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.valor{
+    font-size: 30px;
+    width: 100px;
+}
+
+.suma{
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+}
