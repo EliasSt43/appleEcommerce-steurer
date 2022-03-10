@@ -56,7 +56,7 @@ function Items(){
                                         </button>
                                     </div>
                                     <div class="modal-footer footer">
-                                       <ItemCount/>
+                                       <ItemCount stock="5"/>
                                         <a class="boton" href="../pages-of-product/pedido.html"><button type="button" class="btn btn-primary">Añadir al carrito</button></a>
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@ function Items(){
                                                         </button>
                                                 </div>
                                         <div class="modal-footer footer">
-                                            <ItemCount/>
+                                            <ItemCount stock="10"/>
                                             <a class="boton" href="../pages-of-product/pedido.html"><button type="button" class="btn btn-primary">Añadir al Carrito</button></a>
                                         </div>
                                     </div>
@@ -156,7 +156,7 @@ function Items(){
                                     </button>
                                 </div>
                                 <div class="modal-footer footer">
-                                    <ItemCount/>
+                                    <ItemCount stock="3"/>
                                     <a class="boton" href="../pages-of-product/pedido.html"><button type="button" class="btn btn-primary">Añadir al Carrito</button></a>
                                 </div>
                             </div>
