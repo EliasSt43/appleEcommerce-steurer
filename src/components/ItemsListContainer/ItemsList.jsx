@@ -1,5 +1,4 @@
 import './Items.css';
-import { useState } from 'react';
 import mac from './img/mac.png';
 import mac2 from './img/mac.jpg';
 import mac3 from './img/macbook.jpg';
@@ -9,17 +8,9 @@ import mac6 from './img/mac6.jpg';
 import mac7 from './img/mac7.jpg';
 import mac8 from './img/mac 8.png';
 import mac9 from './img/mac9.jpg';
+import ItemCount from './ItemCount';
 
 function Items(){
-    const [num, setNum] = useState(0);
-
-    const incrementar = () =>{
-        setNum(num + 1);
-    };
-
-    const decrementar = () =>{
-        setNum(num - 1);
-    };
 
     return(
         <section class="cont-img">
@@ -65,11 +56,7 @@ function Items(){
                                         </button>
                                     </div>
                                     <div class="modal-footer footer">
-                                        <div id="num">
-                                        <button onClick={incrementar} class="btn btn-secondary suma">+</button>
-                                        <p class="valor">{num}</p>
-                                        <button onClick={decrementar} class="btn btn-secondary suma">-</button>
-                                        </div>
+                                       <ItemCount/>
                                         <a class="boton" href="../pages-of-product/pedido.html"><button type="button" class="btn btn-primary">Añadir al carrito</button></a>
                                     </div>
                                 </div>
@@ -118,7 +105,8 @@ function Items(){
                                                             <span class="visually-hidden">Next</span>
                                                         </button>
                                                 </div>
-                                        <div class="modal-footer">
+                                        <div class="modal-footer footer">
+                                            <ItemCount/>
                                             <a class="boton" href="../pages-of-product/pedido.html"><button type="button" class="btn btn-primary">Añadir al Carrito</button></a>
                                         </div>
                                     </div>
@@ -167,7 +155,8 @@ function Items(){
                                         <span class="visually-hidden">Next</span>
                                     </button>
                                 </div>
-                                <div class="modal-footer">
+                                <div class="modal-footer footer">
+                                    <ItemCount/>
                                     <a class="boton" href="../pages-of-product/pedido.html"><button type="button" class="btn btn-primary">Añadir al Carrito</button></a>
                                 </div>
                             </div>

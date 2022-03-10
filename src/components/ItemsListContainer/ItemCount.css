@@ -1,0 +1,18 @@
+#num{
+    padding: 0;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.valor{
+    font-size: 30px;
+    width: 100px;
+    margin: 0;
+}
+
+.suma{
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+}
