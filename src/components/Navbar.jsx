@@ -4,10 +4,10 @@ import CartWidget from './CartWidget';
 
 function Navbar(){
     return (
-        <div class="cont">
+        <div className="cont">
             <nav>
-                <ul class="nav_links">
-                    <label class="logo">Mackbooks</label>
+                <ul className="nav_links">
+                    <label className="logo">Mackbooks</label>
                     <li><a href="#">Productos</a></li>
                     <li><a href="#">Preguntas Frecuentes</a></li>
                     <li><a href="#">Sobre Nosotros</a></li>

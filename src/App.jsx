@@ -8,11 +8,13 @@ function App() {
       <header>
         <Navbar />
         <div>
-          <a href="#" class="btn2" target="_blank"><button class="button">Contacto</button></a>
+          <a href="#" className="btn2" target="_blank"><button className="button">Contacto</button></a>
         </div>
       </header>
       <main>
-         <ItemsListContainer greeting="¡Apple Macbooks Ecommerce!"/ >
+        <div>
+         <ItemsListContainer saludo="¡Apple Macbooks Ecommerce!"/ >
+         </div>
       </main>
     </>
   );

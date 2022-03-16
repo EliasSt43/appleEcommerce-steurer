@@ -4,7 +4,7 @@ import { BsCart4 } from 'react-icons/bs';
 
 function CartWidget(){
     return (
-        <div class="bs"><BsCart4/></div>
+        <div className="bs"><BsCart4/></div>
     );
 }
 

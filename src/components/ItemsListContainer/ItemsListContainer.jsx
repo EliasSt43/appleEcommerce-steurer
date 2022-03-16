@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+
 import ItemsList from './ItemsList';
 import './ItemsListContainer.css'
 
 function ItemsListContainer (props){
-    const {greeting}=props
+    const {saludo}=props
 
     return (
         <div>
-            <h1 class="saludo">{greeting}</h1>
+            <h1 className="saludo">{saludo}</h1>
             <ItemsList/>
         </div>
     );

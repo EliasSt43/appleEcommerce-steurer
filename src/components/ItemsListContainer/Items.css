@@ -1,13 +1,5 @@
 
 
-.cont-img{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    margin-top: 100px;
-    margin-left: 10px;
-}
-
 div p{
     color: #000;
     margin-top: 10px;
