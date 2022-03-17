@@ -1,10 +1,16 @@
 import Navbar from './components/Navbar';
 import ItemsListContainer from './components/ItemsListContainer/ItemsListContainer';
 import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
   <>
+  <BrowserRouter>
       <header>
         <Navbar />
         <div>
@@ -16,6 +22,7 @@ function App() {
          <ItemsListContainer saludo="¡Apple Macbooks Ecommerce!"/ >
          </div>
       </main>
+  </BrowserRouter>
     </>
   );
 }

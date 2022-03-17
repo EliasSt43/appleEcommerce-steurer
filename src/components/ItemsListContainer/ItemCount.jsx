@@ -18,9 +18,9 @@ function ItemsCount(props){
 
     return (
         <div id="num">
-            <button onClick={incrementar} className="btn btn-secondary suma">+</button>
+            <button onClick={incrementar} className="btn btn-dark suma">+</button>
                 <p className="valor">{num}</p>
-            <button onClick={decrementar} className="btn btn-secondary suma">-</button>
+            <button onClick={decrementar} className="btn btn-dark suma">-</button>
         </div>
     );
 }

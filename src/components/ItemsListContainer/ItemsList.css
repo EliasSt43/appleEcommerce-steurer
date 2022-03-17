@@ -1,7 +1,7 @@
 .cont-img{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 38rem);
     justify-items: center;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-left: 10px;
 }

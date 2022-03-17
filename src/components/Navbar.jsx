@@ -7,7 +7,7 @@ function Navbar(){
         <div className="cont">
             <nav>
                 <ul className="nav_links">
-                    <label className="logo">Mackbooks</label>
+                    <label className="logo">Macbooks</label>
                     <li><a href="#">Productos</a></li>
                     <li><a href="#">Preguntas Frecuentes</a></li>
                     <li><a href="#">Sobre Nosotros</a></li>
