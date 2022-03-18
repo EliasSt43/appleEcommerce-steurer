@@ -6,24 +6,21 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ItemDetailContainer from './components/ItemsListContainer/ItemDetailContainer';
 
 function App() {
   return (
-  <>
+
   <BrowserRouter>
-      <header>
+
         <Navbar />
-        <div>
           <a href="#" className="btn2" target="_blank"><button className="button">Contacto</button></a>
-        </div>
-      </header>
-      <main>
-        <div>
-         <ItemsListContainer saludo="¡Apple Macbooks Ecommerce!"/ >
-         </div>
-      </main>
+      <Routes>
+        <Route path='/' element={<ItemsListContainer saludo="¡Apple Macbooks Ecommerce!"/>}/>
+        <Route path='/ItemDetailContainer' element={<ItemDetailContainer/> }/>
+      </Routes> 
   </BrowserRouter>
-    </>
+
   );
 }
 

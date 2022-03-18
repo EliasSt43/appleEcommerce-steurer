@@ -1,7 +1,18 @@
 .cont-img{
     display: grid;
-    grid-template-columns: repeat(3, 38rem);
+    grid-template-columns: repeat(3, 29rem);
     justify-items: center;
     margin-top: 80px;
     margin-left: 10px;
+}
+
+@media (min-width:1445px){
+    .cont-img{
+        display: grid;
+        grid-template-columns: repeat(3, 37rem);
+        justify-items: center;
+        margin-top: 80px;
+        margin-left: 10px;
+    }
+    
 }

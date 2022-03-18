@@ -7,6 +7,7 @@ import Items from "./Items";
 function ItemsList(){
 
     const [listProducts, setListProducts] = useState([]);
+    const [cargando, setCargando] = useState(false);
     const productos = [
         {id:'1', name:'Appel Macbook Air', price:'$202.999', description:"(13 pulgadas, 2020, Chip M1, 256 GB de SSD, 8 GB de RAM)", img:'https://www.stopandclick.es/wp-content/uploads/2021/11/macbook-pro-5342546_1280.png'},
         {id:'2', name:'Apple MacBook Pro', price:'$256.398', description:"(13 pulgadas, 2020, Chip M1, 512 GB de SSD, 8 GB de RAM)", img:'https://cdn.pixabay.com/photo/2020/06/26/13/20/macbook-pro-5342709_1280.png'},
@@ -26,7 +27,7 @@ function ItemsList(){
     useEffect(()=>{
         getProducts
         .then((respuesta) => setListProducts(respuesta))
-        .catch((error)=> console.log(error)) 
+        .catch((error)=> console.log(error))
     },[])
 
     console.log(listProducts)

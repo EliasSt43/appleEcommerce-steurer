@@ -16,7 +16,7 @@ const Item = ({productos}) =>{
                                 <ItemCount stock="6"/>
                                 <a href="#" className="btn btn-primary boton">Añadir al carrito</a>
                             </div>
-                            <Link to='/ItemDetail' className="btn btn-dark ver">Ver más</Link>
+                            <Link to='/ItemDetailContainer' className="btn btn-dark ver">Ver más</Link>
                         </div>
                     </div>
         </section>

@@ -1,13 +1,24 @@
 
+import './ItemDetail.css'
 
 
-const ItemDetail = ({productos}) =>{
+const ItemDetail = ({producto}) =>{
     return(
         <section>
-            <div>
-                <h1>Item detail</h1>
-                <img src={productos.img} alt="macbook"/>
-            </div>
+                <di className="cen">
+                    <div className="conte">
+                        <img src={producto.img} className="img" alt="Macbook "/>
+                        <div className="izq">
+                            <h4 className="name">{producto.name}</h4>
+                            <p className='price'>{producto.price}</p>
+                            <div className="">
+                                <a href="#" className="btn btn-primary botton">Añadir al carrito</a>
+                                
+                            </div>
+                            <p className="des">{producto.description}</p>
+                        </div>
+                    </div>
+                </di>
         </section>
     );
 }
