@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import ItemDetailContainer from './components/ItemsListContainer/ItemDetailContainer';
+import Preguntas from './components/Preguntas';
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
           <a href="#" className="btn2" target="_blank"><button className="button">Contacto</button></a>
       <Routes>
         <Route path='/' element={<ItemsListContainer saludo="¡Apple Macbooks Ecommerce!"/>}/>
-        <Route path='/ItemDetailContainer' element={<ItemDetailContainer/> }/>
+        <Route path='/ItemDetailContainer' element={<ItemDetailContainer/>}/>
+        <Route path='/Preguntas' element={<Preguntas/>}></Route>
+
       </Routes> 
   </BrowserRouter>
 

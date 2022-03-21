@@ -30,6 +30,10 @@ li, a{
     margin-right: 16rem;
 }
 
+.logo:hover{
+    color: #0088a9;
+}
+
 .nav_links{
     list-style: none;
 }

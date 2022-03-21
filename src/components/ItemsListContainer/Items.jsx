@@ -13,7 +13,7 @@ const Item = ({productos}) =>{
                             <p className="modal-text desc">{productos.description}</p>
                             <p className='precio'>{productos.price}</p>
                             <div className="modal-footer footer">
-                                <ItemCount stock="6"/>
+                                <ItemCount stock="2"/>
                                 <a href="#" className="btn btn-primary boton">Añadir al carrito</a>
                             </div>
                             <Link to='/ItemDetailContainer' className="btn btn-dark ver">Ver más</Link>
