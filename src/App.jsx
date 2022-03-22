@@ -19,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ItemsListContainer saludo="¡Apple Ecommerce!"/>}/>
         <Route path='/productos' element={<ItemsListContainer/>}/>
+        <Route path='/detail/:itemId' element={<ItemDetailContainer/>}/>
         <Route path='/ItemDetailContainer' element={<ItemDetailContainer/>}/>
         <Route path='/Preguntas' element={<Preguntas/>}></Route>
 

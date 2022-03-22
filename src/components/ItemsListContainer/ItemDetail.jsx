@@ -2,20 +2,20 @@
 import './ItemDetail.css'
 
 
-const ItemDetail = ({producto}) =>{
+const ItemDetail = ({id, img, description, price, name}) =>{
     return(
         <section>
                 <di className="cen">
                     <div className="conte">
-                        <img src={producto.img} className="img" alt={producto.name}/>
+                        <img src={img} className="img" alt={name}/>
                         <div className="izq">
-                            <h4 className="name">{producto.name}</h4>
-                            <p className='price'>${producto.price}</p>
+                            <h4 className="name">{name}</h4>
+                            <p className='price'>${price}</p>
                             <div className="">
                                 <a href="#" className="btn btn-primary botton">Añadir al carrito</a>
                                 
                             </div>
-                            <p className="des">{producto.description}</p>
+                            <p className="des">{description}</p>
                         </div>
                     </div>
                 </di>
