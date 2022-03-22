@@ -2,10 +2,10 @@
 import './ItemDetail.css'
 
 
-const ItemDetail = ({id, img, description, price, name}) =>{
+const ItemDetail = ({img, name, description, price}) =>{
     return(
         <section>
-                <di className="cen">
+                <div className="cen">
                     <div className="conte">
                         <img src={img} className="img" alt={name}/>
                         <div className="izq">
@@ -18,7 +18,7 @@ const ItemDetail = ({id, img, description, price, name}) =>{
                             <p className="des">{description}</p>
                         </div>
                     </div>
-                </di>
+                </div>
         </section>
     );
 }
