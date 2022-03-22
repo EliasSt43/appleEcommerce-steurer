@@ -7,13 +7,13 @@ const Item = ({productos}) =>{
     return(
         <section>
                     <div className="card">
-                        <img src={productos.img} className="card-img-top imgSection-1" alt="Macbook "/>
+                        <img src={productos.img} className="card-img-top imgSection-1" alt={productos.name}/>
                         <div className="card-body">
                             <h5 className="modal-title">{productos.name}</h5>
                             <p className="modal-text desc">{productos.description}</p>
-                            <p className='precio'>{productos.price}</p>
+                            <p className='precio'>${productos.price}</p>
                             <div className="modal-footer footer">
-                                <ItemCount stock="2"/>
+                                <ItemCount stock="5"/>
                                 <a href="#" className="btn btn-primary boton">Añadir al carrito</a>
                             </div>
                             <Link to='/ItemDetailContainer' className="btn btn-dark ver">Ver más</Link>

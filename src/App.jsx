@@ -17,7 +17,8 @@ function App() {
         <Navbar />
           <a href="#" className="btn2" target="_blank"><button className="button">Contacto</button></a>
       <Routes>
-        <Route path='/' element={<ItemsListContainer saludo="¡Apple Macbooks Ecommerce!"/>}/>
+        <Route path='/' element={<ItemsListContainer saludo="¡Apple Ecommerce!"/>}/>
+        <Route path='/productos' element={<ItemsListContainer/>}/>
         <Route path='/ItemDetailContainer' element={<ItemDetailContainer/>}/>
         <Route path='/Preguntas' element={<Preguntas/>}></Route>
 

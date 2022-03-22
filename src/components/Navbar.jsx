@@ -9,8 +9,8 @@ function Navbar(){
         <div className="cont" id='nav'>
             <nav>
                 <ul className="nav_links">
-                    <Link to='./' className="logo">Macbooks</Link>
-                    <li><Link to="./">Productos</Link></li>
+                    <Link to='./' className="logo"><img src="https://imagenpng.com/wp-content/uploads/2017/05/Apple_Logo_Png_06.png" alt="Logo" className='appel' />Appel</Link>
+                    <li><Link to="./productos">Productos</Link></li>
                     <li><Link to="./Preguntas">Preguntas Frecuentes</Link></li>
                     <li><Link to="#">Sobre Nosotros</Link></li>
                 </ul>

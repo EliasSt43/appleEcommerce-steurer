@@ -30,6 +30,10 @@ li, a{
     margin-right: 16rem;
 }
 
+.appel{
+    width: 30px;
+}
+
 .logo:hover{
     color: #0088a9;
 }
@@ -56,7 +60,7 @@ li, a{
         color: #fff;
         font-family: "Poppins", sans-serif;
         font-weight: 500;
-        font-size: 25px;
+        font-size: 30px;
         cursor: pointer;
         margin-right: 25rem;
     }
