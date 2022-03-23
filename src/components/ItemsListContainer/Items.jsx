@@ -1,5 +1,4 @@
 import './Items.css';
-import ItemCount from './ItemCount'
 import {Link} from 'react-router-dom';
 
 const Item = ({productos}) =>{
@@ -13,10 +12,9 @@ const Item = ({productos}) =>{
                             <p className="modal-text desc">{productos.description}</p>
                             <p className='precio'>${productos.price}</p>
                             <div className="modal-footer footer">
-                                <ItemCount stock="5"/>
-                                <a href="#" className="btn btn-primary boton">Añadir al carrito</a>
+                                <Link to={`/detail/${productos.id}`} className="btn btn-primary ver">Ver más</Link>
                             </div>
-                            <Link to={`/detail/${productos.id}`} className="btn btn-dark ver">Ver más</Link>
+                            
                         </div>
                     </div>
         </section>

@@ -1,5 +1,6 @@
-
-import './ItemDetail.css'
+import ItemCount from './ItemCount';
+import './ItemDetail.css';
+import {Link} from 'react-router-dom';
 
 
 const ItemDetail = ({img, name, description, price}) =>{
@@ -7,15 +8,20 @@ const ItemDetail = ({img, name, description, price}) =>{
         <section>
                 <div className="cen">
                     <div className="conte">
+                        <div className='contimg'>
                         <img src={img} className="img" alt={name}/>
+                        </div>
                         <div className="izq">
                             <h4 className="name">{name}</h4>
-                            <p className='price'>${price}</p>
-                            <div className="">
+                            
+                            <div className="contador">
+                                <div className='contprice'>
+                                    <p className='price'>${price}</p>
+                                </div>
+                                    <ItemCount stock="5"/>
+                            </div>   
                                 <a href="#" className="btn btn-primary botton">Añadir al carrito</a>
-                                
-                            </div>
-                            <p className="des">{description}</p>
+                                <p className="des">{description}</p>        
                         </div>
                     </div>
                 </div>

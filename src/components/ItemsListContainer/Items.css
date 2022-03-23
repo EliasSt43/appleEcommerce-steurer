@@ -10,7 +10,7 @@ div p{
 }
 
 .card{
-    width: 26rem;
+    width: 20rem;
     margin-top: 20px;
 }
 
@@ -38,10 +38,9 @@ h5{
 }
 
 .footer{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .boton{
@@ -57,5 +56,14 @@ h5{
 .ver{
     display: flex;
     justify-content: center;
-    background-color: rgb(61, 60, 60);
+    width: 100%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width:1550px){
+    .card{
+        width: 26rem;
+        margin-top: 20px;
+    }
+    
 }

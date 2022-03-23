@@ -4,14 +4,20 @@
     grid-template-columns: repeat(2, 1fr);
     margin-top: 50px;
     background-color: #fff;
-    padding: 50px;
+    padding: 30px;
     border-radius: 5px;
-    width: 80%;
+    width: 60%;
 }
 
 .cen{
     display: flex;
     justify-content: center;
+}
+
+.contimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img{
@@ -26,7 +32,7 @@
 }
 
 .izq{
-    margin-left: 100px;
+    margin-left: 30px;
 }
 
 .price{
@@ -34,14 +40,15 @@
     justify-content: start;
     font-size: 180%;
     font-weight: 500;
+    margin-top: 25px;
 }
 
 .botton{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 40%;
+    width: 100%;
+    height: 15%;
     margin-bottom: 30px;
     font-size: 30px;
     background-color: #0088a9;
@@ -54,70 +61,22 @@
 }
 
 .name{
-    margin-bottom: 30px;
     text-align: center;
     font-size: 200%;
 }
 
-@media (min-width:1445px){
-    .conte{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin-top: 50px;
-        background-color: #fff;
-        padding: 50px;
-        border-radius: 5px;
-        width: 95%;
-    }
+.contador{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 
-    .img{
-        width: 100%;
-        height: 100%;
-    }
+.contprice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .img{
-        width: 100%;
-        height: 100%;
-    }
-    
-    .des{
-        margin-bottom: 8px;
-        font-size: 150%;
-        
-    }
-    
-    .izq{
-        margin-left: 100px;
-    }
-    
-    .price{
-        display: flex;
-        justify-content: start;
-        font-size: 250%;
-        font-weight: 500;
-    }
-    
-    .botton{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 50%;
-        margin-bottom: 30px;
-        font-size: 40px;
-        background-color: #0088a9;
-        border: none;
-        
-    }
-    
-    .botton:hover{
-        background-color: #026983;
-    }
-    
-    .name{
-        margin-bottom: 30px;
-        text-align: center;
-        font-size: 300%;
-    }
-    
+.bt{
+    display: felx;
+    justify-content: end;
 }
