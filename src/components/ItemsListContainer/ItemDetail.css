@@ -65,18 +65,8 @@
     font-size: 200%;
 }
 
-.contador{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
 .contprice{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.bt{
-    display: felx;
-    justify-content: end;
 }

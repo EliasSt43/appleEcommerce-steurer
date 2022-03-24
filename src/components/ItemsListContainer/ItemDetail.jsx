@@ -1,9 +1,24 @@
 import ItemCount from './ItemCount';
 import './ItemDetail.css';
-import {Link} from 'react-router-dom';
+import { useState } from "react";
 
 
-const ItemDetail = ({img, name, description, price}) =>{
+const ItemDetail = ({ id, img, name, description, price, stock}) =>{
+
+    const [cantidad, setCantidad] = useState(1);
+
+    const contAgregar = () => {
+        const itemToCart = {
+            id,
+            img,
+            name,
+            price,
+            cantidad
+        }
+
+        console.log(itemToCart)
+    }
+
     return(
         <section>
                 <div className="cen">
@@ -13,14 +28,12 @@ const ItemDetail = ({img, name, description, price}) =>{
                         </div>
                         <div className="izq">
                             <h4 className="name">{name}</h4>
-                            
-                            <div className="contador">
+
                                 <div className='contprice'>
                                     <p className='price'>${price}</p>
                                 </div>
-                                    <ItemCount stock="5"/>
-                            </div>   
-                                <a href="#" className="btn btn-primary botton">Añadir al carrito</a>
+                              
+                                <ItemCount stock={stock} cantidad={cantidad} setCantidad={setCantidad} contAgregar={contAgregar}/>
                                 <p className="des">{description}</p>        
                         </div>
                     </div>
