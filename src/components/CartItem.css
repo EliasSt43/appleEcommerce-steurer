@@ -1,0 +1,41 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.cartitem{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    flex-flow: column;
+    background: #fff;
+    margin: 30px;
+}
+
+.cartitem1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.titu{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.contimg{
+    display: flex;
+    justify-content: center;
+}
+
+.contimg p{
+    font-size: 25px;
+}
+
+.imagen{
+    width: 40%;
+    height: 100%;
+}

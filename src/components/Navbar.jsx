@@ -15,7 +15,9 @@ function Navbar(){
                     <li><Link to="#">Sobre Nosotros</Link></li>
                 </ul>
             </nav>
-           <CartWidget/>
+            <Link to="/cart">
+                <CartWidget/>
+           </Link>
         </div>
     );
 }

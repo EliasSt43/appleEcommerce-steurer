@@ -1,22 +1,23 @@
 import ItemCount from './ItemCount';
 import './ItemDetail.css';
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from '../CartContext';
 
 
-const ItemDetail = ({ id, img, name, description, price, stock}) =>{
+const ItemDetail = ({item}) =>{
 
+
+    const carritoContext = useContext(CartContext);
     const [cantidad, setCantidad] = useState(1);
+    const [stockProducto, setStockProducto] = useState(item.stock);
 
-    const contAgregar = () => {
-        const itemToCart = {
-            id,
-            img,
-            name,
-            price,
-            cantidad
-        }
+    console.log('carritoContext-itemDetail', carritoContext);
 
-        console.log(itemToCart)
+    const contAgregar = (quantityToAdd) => {
+        setCantidad(quantityToAdd)
+        setStockProducto(stockProducto - quantityToAdd);
+        carritoContext.addItem(item, quantityToAdd);
+        carritoContext.isInCart(item)
     }
 
     return(
@@ -24,17 +25,17 @@ const ItemDetail = ({ id, img, name, description, price, stock}) =>{
                 <div className="cen">
                     <div className="conte">
                         <div className='contimg'>
-                        <img src={img} className="img" alt={name}/>
+                        <img src={item.img} className="img" alt={item.name}/>
                         </div>
                         <div className="izq">
-                            <h4 className="name">{name}</h4>
+                            <h4 className="name">{item.name}</h4>
 
                                 <div className='contprice'>
-                                    <p className='price'>${price}</p>
+                                    <p className='price'>${item.price}</p>
                                 </div>
                               
-                                <ItemCount stock={stock} cantidad={cantidad} setCantidad={setCantidad} contAgregar={contAgregar}/>
-                                <p className="des">{description}</p>        
+                                <ItemCount stock={item.stock} cantidad={cantidad} setCantidad={setCantidad} contAgregar={contAgregar}/>
+                                <p className="des">{item.description}</p>        
                         </div>
                     </div>
                 </div>

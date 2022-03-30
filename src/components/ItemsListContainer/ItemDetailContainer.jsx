@@ -40,7 +40,7 @@ function ItemDetailContainer (){
 
     return (
         <div>
-          <ItemDetail {...item}/>
+          <ItemDetail item={item}/>
         </div>
     );
 }

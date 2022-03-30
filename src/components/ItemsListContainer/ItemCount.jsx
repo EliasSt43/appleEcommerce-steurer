@@ -29,7 +29,7 @@ function ItemsCount({stock, cantidad, setCantidad, contAgregar}){
             <br />
         </div>
         
-            <button className="btn btn-primary botton" onClick={contAgregar}>Añadir al carrito</button>
+            <button className="btn btn-primary botton" onClick={()=> {contAgregar(cantidad)}}>Añadir al carrito</button>
         
         </>
     );
