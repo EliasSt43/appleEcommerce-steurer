@@ -1,3 +1,7 @@
+.bs1{
+    position: relative;
+}
+
 .bs{
     margin-top: 0;
     color: #fff;
@@ -7,7 +11,21 @@
 .bs:hover{
     color: #0088a9;
 }
-
+.bs span{
+    position: absolute;
+    top: -0.3rem;
+    right: -0.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: solid 1px red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: red;
+}
 img, svg{
     vertical-align: inherit;
 }

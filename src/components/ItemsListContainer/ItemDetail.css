@@ -51,13 +51,8 @@
     height: 15%;
     margin-bottom: 30px;
     font-size: 30px;
-    background-color: #0088a9;
     border: none;
-    
-}
-
-.botton:hover{
-    background-color: #026983;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .name{
@@ -69,4 +64,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.a-end-button {
+    width: 100%;
+    text-align: center;
+    margin-left: 50px;
+}
+.end-button{
+    padding: 10px;
+    border-radius: 5px;
+    background: #0088a9;
+    color: white;
+    margin: 10px 0;
+    width: 150px;
 }

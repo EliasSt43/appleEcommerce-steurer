@@ -2,13 +2,13 @@ import ItemCount from './ItemCount';
 import './ItemDetail.css';
 import { useContext, useState } from "react";
 import { CartContext } from '../CartContext';
-
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({item}) =>{
 
 
     const carritoContext = useContext(CartContext);
-    const [cantidad, setCantidad] = useState(1);
+    const [cantidad, setCantidad] = useState(0);
     const [stockProducto, setStockProducto] = useState(item.stock);
 
     console.log('carritoContext-itemDetail', carritoContext);
@@ -17,7 +17,6 @@ const ItemDetail = ({item}) =>{
         setCantidad(quantityToAdd)
         setStockProducto(stockProducto - quantityToAdd);
         carritoContext.addItem(item, quantityToAdd);
-        carritoContext.isInCart(item)
     }
 
     return(
@@ -35,7 +34,17 @@ const ItemDetail = ({item}) =>{
                                 </div>
                               
                                 <ItemCount stock={item.stock} cantidad={cantidad} setCantidad={setCantidad} contAgregar={contAgregar}/>
-                                <p className="des">{item.description}</p>        
+                                <p className="des">{item.description}</p>    
+                                {
+                                cantidad > 0 &&
+                                <Link to="/cart" className='a-end-button'>
+                                    <button className='btn btn-primary'>Terminar mi compra</button>
+                                </Link>   
+                            }
+                                <Link to="/" className='a-end-button'>
+                                    <button className='btn btn-primary'>Regresar al listado</button>
+                                </Link>  
+                                  
                         </div>
                     </div>
                 </div>
