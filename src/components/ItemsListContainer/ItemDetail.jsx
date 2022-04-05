@@ -10,10 +10,12 @@ const ItemDetail = ({item}) =>{
     const carritoContext = useContext(CartContext);
     const [cantidad, setCantidad] = useState(0);
     const [stockProducto, setStockProducto] = useState(item.stock);
+    const [compra, setCompra] = useState(false)
 
     console.log('carritoContext-itemDetail', carritoContext);
 
     const contAgregar = (quantityToAdd) => {
+        setCompra(true)
         setCantidad(quantityToAdd)
         setStockProducto(stockProducto - quantityToAdd);
         carritoContext.addItem(item, quantityToAdd);
@@ -32,11 +34,13 @@ const ItemDetail = ({item}) =>{
                                 <div className='contprice'>
                                     <p className='price'>${item.price}</p>
                                 </div>
-                              
+                              { !compra &&
                                 <ItemCount stock={item.stock} cantidad={cantidad} setCantidad={setCantidad} contAgregar={contAgregar}/>
-                                <p className="des">{item.description}</p>    
+                                } 
+                                <p className="des">{item.description}</p> 
+                                  
                                 {
-                                cantidad > 0 &&
+                                compra &&
                                 <Link to="/cart" className='a-end-button'>
                                     <button className='btn btn-primary'>Terminar mi compra</button>
                                 </Link>   
