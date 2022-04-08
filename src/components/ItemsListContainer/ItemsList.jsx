@@ -3,30 +3,31 @@ import './ItemsList.css'
 import Items from "./Items";
 import { getProducts } from '../../mock/stock';
 import { useParams } from 'react-router-dom';
+import { getDocs } from 'firebase/firestore';
 
 
 
-function ItemsList(){
+function ItemsList({listItems}){
 
     const [listProducts, setListProducts] = useState([]);
 
     const {categoriaId} = useParams();
 
-    useEffect(()=>{
-        getProducts
-        .then((res) =>{
+    
+        getDocs(listItems)
+        .then((listItems) =>{
             if(!categoriaId){
-                setListProducts(res)
+                setListProducts(listItems)
             }else{
-                setListProducts((res.filter((prod) => prod.categoria === categoriaId)))
+                setListProducts((listItems.filter((prod) => prod.categoria === categoriaId)))
             }
         })
         .catch((error)=> console.log(error))
-    },[categoriaId])
+    
 
     return(
         <section className="cont-img">
-            {listProducts.map((productos)=> <Items productos={productos} key={productos.id}/>)}   
+            {listProducts.map((listItems)=> <Items productos={listItems} key={listItems.id}/>)}   
         </section>
         
     );

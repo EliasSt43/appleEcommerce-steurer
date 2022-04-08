@@ -2,7 +2,6 @@ import Navbar from './components/Navbar';
 import ItemsListContainer from './components/ItemsListContainer/ItemsListContainer';
 import './App.css';
 import ItemDetailContainer from './components/ItemsListContainer/ItemDetailContainer';
-import Preguntas from './components/Preguntas';
 import {
   BrowserRouter,
   Routes,
@@ -24,7 +23,6 @@ function App() {
           <Route path='/productos/:categoriaId' element={<ItemsListContainer/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/detail/:itemId' element={<ItemDetailContainer/>}/>
-          <Route path='/Preguntas' element={<Preguntas/>}/>
 
         </Routes> 
     </BrowserRouter>
