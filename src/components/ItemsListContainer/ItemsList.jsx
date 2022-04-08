@@ -13,21 +13,21 @@ function ItemsList({listItems}){
 
     const {categoriaId} = useParams();
 
-    
+    useEffect(()=>{
         getDocs(listItems)
-        .then((listItems) =>{
+        .then((res) =>{
             if(!categoriaId){
-                setListProducts(listItems)
+                setListProducts(res.docs.map(doc=>{return {id: doc.id, ...doc.data()}}))
             }else{
-                setListProducts((listItems.filter((prod) => prod.categoria === categoriaId)))
+                setListProducts((res.docs.map.filter((item) => item.categoria === categoriaId)))
             }
         })
         .catch((error)=> console.log(error))
-    
+    },[categoriaId])
 
     return(
         <section className="cont-img">
-            {listProducts.map((listItems)=> <Items productos={listItems} key={listItems.id}/>)}   
+            {listProducts.map((productos)=> <Items productos={listItems} key={listItems.id}/>)}   
         </section>
         
     );
