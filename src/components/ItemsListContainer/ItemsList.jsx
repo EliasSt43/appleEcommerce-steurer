@@ -1,33 +1,39 @@
 import { useEffect, useState } from 'react';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { useParams } from 'react-router-dom';
+import { db } from '../../FireBase';
 import './ItemsList.css'
 import Items from "./Items";
-import { getProducts } from '../../mock/stock';
-import { useParams } from 'react-router-dom';
-import { getDocs } from 'firebase/firestore';
 
 
 
-function ItemsList({listItems}){
+function ItemsList(){
 
-    const [listProducts, setListProducts] = useState([]);
+    const [listItems, setListItems] = useState({});
 
     const {categoriaId} = useParams();
 
-    useEffect(()=>{
-        getDocs(listItems)
-        .then((res) =>{
-            if(!categoriaId){
-                setListProducts(res.docs.map(doc=>{return {id: doc.id, ...doc.data()}}))
-            }else{
-                setListProducts((res.docs.map.filter((item) => item.categoria === categoriaId)))
-            }
-        })
-        .catch((error)=> console.log(error))
-    },[categoriaId])
+    useEffect(() => {
+        const productosRef = collection(db, 'Items')
+        const q = categoriaId ? query(productosRef, where("categoria", "==", categoriaId)) : productosRef
 
+        getDocs(q)
+        .then((resp) => {
+            setListItems( resp.docs.map((doc) => {
+
+                return {
+                    id: doc.id,
+                    ...doc.data()
+                }
+            }))
+        })
+       .catch((error)=> console.log(error))
+    }, [categoriaId])
+
+    console.log('listItems', listItems)
     return(
         <section className="cont-img">
-            {listProducts.map((productos)=> <Items productos={listItems} key={listItems.id}/>)}   
+            <Items listItems={listItems}/>
         </section>
         
     );
