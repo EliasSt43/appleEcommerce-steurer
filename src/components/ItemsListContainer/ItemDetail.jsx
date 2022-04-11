@@ -8,11 +8,9 @@ const ItemDetail = ({item}) =>{
 
 
     const carritoContext = useContext(CartContext);
-    const [cantidad, setCantidad] = useState(0);
+    const [cantidad, setCantidad] = useState(1);
     const [stockProducto, setStockProducto] = useState(item.stock);
     const [compra, setCompra] = useState(false)
-
-    console.log('carritoContext-itemDetail', carritoContext);
 
     const contAgregar = (quantityToAdd) => {
         setCompra(true)
@@ -22,6 +20,7 @@ const ItemDetail = ({item}) =>{
     }
 
     return(
+        <>
         <section>
                 <div className="cen">
                     <div className="conte">
@@ -52,7 +51,8 @@ const ItemDetail = ({item}) =>{
                         </div>
                     </div>
                 </div>
-        </section>
+        </section >
+    </>
     );
 }
 

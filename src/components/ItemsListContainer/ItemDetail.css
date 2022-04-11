@@ -69,13 +69,14 @@
 .a-end-button {
     width: 100%;
     text-align: center;
-    margin-left: 10px;
 }
-.end-button{
-    padding: 10px;
-    border-radius: 5px;
-    background: #0088a9;
-    color: white;
-    margin: 10px 0;
-    width: 150px;
+
+@media (min-width:1550px){
+    .a-end-button {
+        width: 100%;
+        text-align: center;
+        margin: 20px;
+        
+    }
+    
 }

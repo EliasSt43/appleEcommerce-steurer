@@ -1,20 +1,19 @@
 import './Items.css';
 import {Link} from 'react-router-dom';
 
-const Item = ({listItems}) =>{
+const Item = ({item}) =>{
 
     return(
         <section>
                     <div className="card">
-                        {/* <img src={listItems.img} className="card-img-top imgSection-1" alt={listItems.name}/> */}
+                        <img src={item.img} className="card-img-top imgSection-1" alt={item.name}/>
                         <div className="card-body">
-                            <h5 className="modal-title">{listItems.name}</h5>
-                            <p className="modal-text desc">{listItems.description}</p>
-                            <p className='precio'>${listItems.price}</p>
+                            <h5 className="modal-title">{item.name}</h5>
+                            <p className="modal-text desc">{item.description}</p>
+                            <p className='precio'>${item.price}</p>
                             <div className="modal-footer footer">
-                                <Link to={`/detail/${listItems.id}`} className="btn btn-primary ver">Ver más</Link>
+                                <Link to={`/detail/${item.id}`} className="btn btn-primary ver">Ver más</Link>
                             </div>
-                            
                         </div>
                     </div>
         </section>

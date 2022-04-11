@@ -1,6 +1,16 @@
+.botones{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-primary{
+    margin-left: 10px;
+}
+
 .totalprice{
     color: #fff;
-    font-size: 20px;
+    font-size: 30px;
     margin: 10px;
 }
 
@@ -20,4 +30,27 @@
     color: #fff;
     font-size: 40px;
     font-weight: 500;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(4,300px);
+    margin: 20px;
+}
+.form-control{
+    width: 100%;
+    
+}
+
+.enviar{
+    font-size: 20px;
+}
+
+.borrar{
+    font-size: 25px;
 }

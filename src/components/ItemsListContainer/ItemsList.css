@@ -4,6 +4,19 @@
     justify-items: center;
     margin-top: 80px;
     margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.cargando{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.carga{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 500;
 }
 
 @media (min-width:1550px){

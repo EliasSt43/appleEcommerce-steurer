@@ -27,7 +27,7 @@ li, a{
     font-weight: 500;
     font-size: 25px;
     cursor: pointer;
-    margin-right: 16rem;
+    margin-right: 10rem;
 }
 
 .appel{
@@ -55,7 +55,7 @@ li, a{
     color: #0088a9;
 }
 
-@media (min-width:1445px){
+@media (min-width:1550px){
     .logo{
         color: #fff;
         font-family: "Poppins", sans-serif;

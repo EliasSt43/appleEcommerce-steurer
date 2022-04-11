@@ -16,10 +16,9 @@ function App() {
     <BrowserRouter>
 
           <Navbar />
-            <a href="#" className="btn2" target="_blank"><button className="button">Contacto</button></a>
+            <a href="https://wa.me/543755637756" className="btn2" target="_blank"><button className="button">Contacto</button></a>
         <Routes>
           <Route path='/' element={<ItemsListContainer saludo="¡Apple Ecommerce!"/>}/>
-          <Route path='/productos' element={<ItemsListContainer/>}/>
           <Route path='/productos/:categoriaId' element={<ItemsListContainer/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/detail/:itemId' element={<ItemDetailContainer/>}/>
