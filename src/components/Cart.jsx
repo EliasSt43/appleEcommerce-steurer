@@ -9,6 +9,7 @@ import { db } from '../FireBase';
 export const Cart = () => {
     const carritoContext = useContext(CartContext);
     const productosCarrito = carritoContext.productosCarrito;
+    const eliminar = carritoContext.clear
 
     const sendOrder = async(e) => {
         e.preventDefault();
@@ -26,12 +27,14 @@ export const Cart = () => {
             total: carritoContext.getTotalPrice(),
             date: Timestamp.fromDate(new Date())
         }
-
+        
         const ordersCollection = collection(db, 'Orders');
-        await addDoc(ordersCollection, newOrder);
-        alert('Ordern Enviada');
+        const docReference = await addDoc(ordersCollection, newOrder);
+        console.log('newOrder: ', docReference.id)
+        alert('Orden Enviada');
+        eliminar()
     }
-
+        
     return(
         <>
         <div>
@@ -52,7 +55,7 @@ export const Cart = () => {
                             <input className="form-control" type="text" placeholder='Nombre'/>
                             <input className="form-control" type="text" placeholder='Teléfono'/>
                             <input className="form-control" type="gmail" placeholder='example@gmail.com'/>
-                            <button className='btn btn-primary enviar' type='submit'>Enviar orden</button>
+                            <button className='btn btn-primary enviar' type='submit' >Enviar orden</button>
                         </form>
                     </div>
                     <div className='botones'>

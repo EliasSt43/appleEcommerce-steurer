@@ -9,7 +9,7 @@ function Navbar(){
         <div className="cont" id='nav'>
             <nav>
                 <ul className="nav_links">
-                    <Link to='./' className="logo"><img src="https://imagenpng.com/wp-content/uploads/2017/05/Apple_Logo_Png_06.png" alt="Logo" className='appel' />Apple</Link>
+                    <Link to='./' className="logo"><img src="/img/appel.ico" alt="Logo" className='appel' />Apple</Link>
                     <li><Link to="./productos/Iphone">Iphone</Link></li>
                     <li><Link to="./productos/Macbook">MacBook</Link></li>
                     <li><Link to="./productos/Imac">iMac</Link></li>
