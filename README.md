@@ -2,7 +2,7 @@
 
 Appel Ecommer es una pagina web, que esta destinada a vender productos exclusivos de Appel, donde cada usuario agrega al carrito de compras todos los productos que desea pedir, para finalizar debe agregar sus datos especificos y dar al boton "Enviar Orden".
 
-![image]()
+![image](public/img/Appel Ecommer.gif)
 
 
 Este proyecto fue realizado por las siguientes tecnologías
