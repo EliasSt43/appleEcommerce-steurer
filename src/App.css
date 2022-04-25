@@ -5,24 +5,6 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
-.button{
-  color: #fff;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  padding: 9px 25px;
-  background-color: rgba(0, 136, 169, 1);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.5s ease 0s;
-}
-
-.button:hover{
-  background-color: #eaecec;
-  color: #000;
-}
-
 .btn2{
   z-index: 1;
   position: fixed;

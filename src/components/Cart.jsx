@@ -1,15 +1,17 @@
 import './Cart.css'
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "./CartContext";
 import { CartItem } from "./CartItem";
 import { Link } from 'react-router-dom';
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { db } from '../FireBase';
+import { Alert } from 'react-bootstrap';
 
 export const Cart = () => {
     const carritoContext = useContext(CartContext);
     const productosCarrito = carritoContext.productosCarrito;
     const eliminar = carritoContext.clear
+    const [show, setShow] = useState(true);
 
     const sendOrder = async(e) => {
         e.preventDefault();
@@ -30,8 +32,7 @@ export const Cart = () => {
         
         const ordersCollection = collection(db, 'Orders');
         const docReference = await addDoc(ordersCollection, newOrder);
-        console.log('newOrder: ', docReference.id)
-        alert('Orden Enviada');
+        alert(`Orden Enviada, id: ${docReference.id}`);
         eliminar()
     }
         
@@ -50,14 +51,16 @@ export const Cart = () => {
                     <p className="totalprice">Total: ${carritoContext.getTotalPrice()}</p>
                         
                     </div>
-                    <div className='formulario'>
-                        <form className='form' onSubmit={sendOrder}>
-                            <input className="form-control" type="text" placeholder='Nombre'/>
-                            <input className="form-control" type="text" placeholder='Teléfono'/>
-                            <input className="form-control" type="gmail" placeholder='example@gmail.com'/>
-                            <button className='btn btn-primary enviar' type='submit' >Enviar orden</button>
-                        </form>
-                    </div>
+                  
+                        <div className='formulario'>
+                            <form className='form' onSubmit={sendOrder}>
+                                <input className="form-control" type="text" placeholder='Nombre' required/>
+                                <input className="form-control" type="text" placeholder='Teléfono' required/>
+                                <input className="form-control" type="gmail" placeholder='example@gmail.com' required/>
+                                <button className='btn btn-primary enviar' type='submit' >Enviar orden</button>
+                            </form>
+                        </div>
+                
                     <div className='botones'>
                         <button  className="btn btn-primary borrar" onClick={carritoContext.clear}>Vaciar carrito</button>
                     </div>
