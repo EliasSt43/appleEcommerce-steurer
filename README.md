@@ -8,3 +8,5 @@ Appel Ecommer es una pagina web, que esta destinada a vender productos exclusivo
 Este proyecto fue realizado por las siguientes tecnologías
 
 * [React] (https://es.reactjs.org/) - React te ayuda a crear interfaces de usuario interactivas de forma sencilla.
+
+### Desarrollado por  [Elias Steurer](https://github.com/EliasSt43/) 😀
